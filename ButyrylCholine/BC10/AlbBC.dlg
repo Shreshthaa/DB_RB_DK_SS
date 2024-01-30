@@ -1,0 +1,1356 @@
+          AutoDock 4.2 Release 4.2.6   
+         (C) 1989-2012 The Scripps Research Institute
+        AutoDock comes with ABSOLUTELY NO WARRANTY.
+        AutoDock is free software, and you are welcome
+        to redistribute it under certain conditions;
+        for details type 'autodock4 -C'
+
+                     main.cc  $Revision: 1.213 $
+
+                   Compiled on Jul 18 2014 at 15:34:58
+
+
+This file was created at:			4:09 40" p.m., 01/16/2017
+                   on host:		"LAPTOP-6LBS08QH"
+Current Working Directory = "F:\Autodock\Autodock"
+
+      ________________________________________________________________
+
+                   SETTING UP DEFAULT PARAMETER LIBRARY
+      ________________________________________________________________
+
+
+Random number generator was seeded with values 2748, 1484563180.
+Docking parameter file (DPF) used for this docking:		F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+DPF> autodock_parameter_version 4.2       # used by autodock to validate parameter set
+
+	Autodock parameter version 4.2.
+DPF> outlev 1                             # diagnostic output level
+
+Output Level = 1  ADT-COMPATIBLE OUTPUT DURING DOCKING.
+DPF> intelec                              # calculate internal electrostatics
+
+Electrostatic energies will be calculated for all non-bonds between moving atoms.
+DPF> seed pid time                        # seeds for random generator
+
+Random number generator was seeded with values 2748, 1484563180.
+DPF> ligand_types C OA N                  # atoms types in ligand
+
+DPF> fld Alb.maps.fld                     # grid_data_file
+
+Opening Grid Map Dimensions file:		Alb.maps.fld
+Grid Point Spacing =				0.375 Angstroms
+
+Even Number of User-specified Grid Points =	60 x-points
+						60 y-points
+						60 z-points
+
+Coordinates of Central Grid Point of Maps =	(24.275, -2.680, 10.246)
+Macromolecule file used to create Grid Maps =	F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\Alb.pdbqt
+Grid Parameter file used to create Grid Maps =	F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.gpf
+Minimum coordinates in grid = (13.025, -13.930, -1.004)
+Maximum coordinates in grid = (35.525, 8.570, 21.496)
+
+DPF> map Alb.C.map                        # atom-specific affinity map
+
+DPF> map Alb.OA.map                       # atom-specific affinity map
+
+DPF> map Alb.N.map                        # atom-specific affinity map
+
+DPF> elecmap Alb.e.map                    # electrostatics map
+
+DPF> desolvmap Alb.d.map                  # desolvation map
+
+DPF> move F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt                        # small molecule
+
+1,4-interactions will be _ignored_ in the non-bonded internal energy calculation.
+
+Ligand PDBQT file = "F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt"
+
+INPUT LIGAND PDBQT FILE:
+________________________
+
+INPUT-LIGAND-PDBQT: REMARK  6 active torsions:
+INPUT-LIGAND-PDBQT: REMARK  status: ('A' for Active; 'I' for Inactive)
+INPUT-LIGAND-PDBQT: REMARK    1  A    between atoms: N_1  and  C_2 
+INPUT-LIGAND-PDBQT: REMARK    2  A    between atoms: C_2  and  C_6 
+INPUT-LIGAND-PDBQT: REMARK    3  A    between atoms: C_6  and  O_11 
+INPUT-LIGAND-PDBQT: REMARK    4  A    between atoms: C_7  and  C_8 
+INPUT-LIGAND-PDBQT: REMARK    5  A    between atoms: C_7  and  C_9 
+INPUT-LIGAND-PDBQT: REMARK    6  A    between atoms: C_8  and  O_11 
+INPUT-LIGAND-PDBQT: ROOT
+INPUT-LIGAND-PDBQT: HETATM    1  C   UNK            -0.688   0.176   0.021  0.00  0.00     0.206 C 
+INPUT-LIGAND-PDBQT: ENDROOT
+INPUT-LIGAND-PDBQT: BRANCH   1   2
+INPUT-LIGAND-PDBQT: HETATM    2  C   UNK            -1.818  -0.834   0.029  0.00  0.00     0.262 C 
+INPUT-LIGAND-PDBQT: BRANCH   2   3
+INPUT-LIGAND-PDBQT: HETATM    3  N   UNK            -3.150  -0.098  -0.006  0.00  0.00    -0.077 N 
+INPUT-LIGAND-PDBQT: HETATM    4  C   UNK            -3.218   0.770  -1.254  0.00  0.00     0.271 C 
+INPUT-LIGAND-PDBQT: HETATM    5  C   UNK            -4.287  -1.109  -0.029  0.00  0.00     0.271 C 
+INPUT-LIGAND-PDBQT: HETATM    6  C   UNK            -3.277   0.780   1.231  0.00  0.00     0.271 C 
+INPUT-LIGAND-PDBQT: ENDBRANCH   2   3
+INPUT-LIGAND-PDBQT: ENDBRANCH   1   2
+INPUT-LIGAND-PDBQT: BRANCH   1   7
+INPUT-LIGAND-PDBQT: HETATM    7  O   UNK             0.559  -0.505   0.017  0.00  0.00    -0.320 OA
+INPUT-LIGAND-PDBQT: BRANCH   7   8
+INPUT-LIGAND-PDBQT: HETATM    8  C   UNK             1.675   0.290   0.009  0.00  0.00     0.258 C 
+INPUT-LIGAND-PDBQT: HETATM    9  O   UNK             1.676   1.514   0.006  0.00  0.00    -0.265 OA
+INPUT-LIGAND-PDBQT: BRANCH   8  10
+INPUT-LIGAND-PDBQT: HETATM   10  C   UNK             2.909  -0.582   0.005  0.00  0.00     0.111 C 
+INPUT-LIGAND-PDBQT: BRANCH  10  11
+INPUT-LIGAND-PDBQT: HETATM   11  C   UNK             4.193   0.243  -0.029  0.00  0.00     0.005 C 
+INPUT-LIGAND-PDBQT: HETATM   12  C   UNK             5.427  -0.644  -0.001  0.00  0.00     0.005 C 
+INPUT-LIGAND-PDBQT: ENDBRANCH  10  11
+INPUT-LIGAND-PDBQT: ENDBRANCH   8  10
+INPUT-LIGAND-PDBQT: ENDBRANCH   7   8
+INPUT-LIGAND-PDBQT: ENDBRANCH   1   7
+INPUT-LIGAND-PDBQT: TORSDOF 6
+________________________________________________________________________________
+
+Total charge on ligand                               =	+0.998 e
+REMARK  6 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: N_1  and  C_2 
+REMARK    2  A    between atoms: C_2  and  C_6 
+REMARK    3  A    between atoms: C_6  and  O_11 
+REMARK    4  A    between atoms: C_7  and  C_8 
+REMARK    5  A    between atoms: C_7  and  C_9 
+REMARK    6  A    between atoms: C_8  and  O_11 
+
+
+Number of Rotatable Bonds in Small Molecule =	6 torsions
+Number of atoms in ligand:  12
+
+Number of non-hydrogen atoms in ligand:  12
+
+Number of vibrational degrees of freedom of ligand:  30
+
+
+Number of torsional degrees of freedom = 6
+Estimated loss of torsional free energy upon binding = +1.7898 kcal/mol
+
+
+DPF> about 0.0001 0.0001 -0.0001          # small molecule center
+
+Small molecule center of rotation =	(+0.000, +0.000, -0.000)
+
+DPF> tran0 random                         # initial coordinates/A or random
+
+Initial translation =			(24.765, 7.651, 0.490) Angstroms
+DPF> quaternion0 random                   # initial orientation
+
+Each run will begin with a new, random initial orientation.
+Initial quaternion,  (x,y,z,w) =	( -0.795, 0.385, 0.041, 0.467 ),
+DPF> dihe0 random                         # initial dihedrals (relative) or random
+
+DPF> torsdof 6                            # torsional degrees of freedom
+
+Number of torsional degrees of freedom = 6
+Free energy coefficient for torsional degrees of freedom = 0.2983, the factory default value.
+
+Estimated loss of torsional free energy upon binding = +1.7898 kcal/mol
+
+DPF> rmstol 2.0                           # cluster_tolerance/A
+
+Maximum RMS tolerance for conformational cluster analysis = 2.00 Angstroms
+DPF> extnrg 1000.0                        # external grid energy
+
+External grid energy (beyond grid map walls) = 1000.00
+
+DPF> e0max 0.0 10000                      # max initial energy; max number of retries
+
+Using user-specified maximum number of retries for simanneal initialization, 10000 retries.
+If the simanneal initial energy is greater than e0max, 0.000,
+then a new, random initial state will be created.
+
+DPF> ga_pop_size 150                      # number of individuals in population
+
+A population of 150 individuals will be used
+DPF> ga_num_evals 2500000                 # maximum number of energy evaluations
+
+There will be at most 2500000 function evaluations used.
+DPF> ga_num_generations 27000             # maximum number of generations
+
+The GA will run for at most 27000 generations.
+DPF> ga_elitism 1                         # number of top individuals to survive to next generation
+
+The 1 best will be preserved each GA generation.
+DPF> ga_mutation_rate 0.02                # rate of gene mutation
+
+The mutation rate is 0.020000.
+DPF> ga_crossover_rate 0.8                # rate of crossover
+
+The crossover rate is 0.800000.
+DPF> ga_window_size 10                    # 
+
+The GA's selection window is 10 generations.
+DPF> ga_cauchy_alpha 0.0                  # Alpha parameter of Cauchy distribution
+
+The alpha parameter (for the Cauchy distribution) is being set to 0.000000.
+DPF> ga_cauchy_beta 1.0                   # Beta parameter Cauchy distribution
+
+The beta parameter (for the Cauchy distribution) is being set to 1.000000.
+DPF> set_ga                               # set the above parameters for GA or LGA
+
+DPF> sw_max_its 300                       # iterations of Solis & Wets local search
+
+Solis & Wets algorithms will perform at most 300 iterations.
+DPF> sw_max_succ 4                        # consecutive successes before changing rho
+
+Solis & Wets algorithms expand rho every 4 in a row successes.
+DPF> sw_max_fail 4                        # consecutive failures before changing rho
+
+Solis & Wets algorithms contract rho every 4 in a row failures.
+DPF> sw_rho 1.0                           # size of local search space to sample
+
+rho is set to 1.000000.
+DPF> sw_lb_rho 0.01                       # lower bound on rho
+
+rho will never get smaller than 0.010000.
+DPF> ls_search_freq 0.06                  # probability of performing local search on individual
+
+Local search will be performed with frequency 0.060000.
+DPF> set_psw1                             # set the above pseudo-Solis & Wets parameters
+
+Creating a new Local Search object using the pseudo-Solis-Wets algorithm (pSW1) with the current settings.
+
+DPF> unbound_model bound                  # state of unbound ligand
+
+DPF> ga_run 10                            # do this many hybrid GA-LS runs
+
+centering ligand on specified point: 0.000 0.000 -0.000
+Furthest true ligand atom from "about" center is 5.465 Angstroms (maxrad).
+Number of requested GA dockings = 10 runs
+Unbound model to be used is 'same as bound' [AutoDock 4.2 default].
+
+	BEGINNING GENETIC ALGORITHM DOCKING 1 of 10
+Run: 1 Seed: 838843336 744993397 [ Run 1 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -5.315
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 29.768 -3.540 10.830 quatxyzw -0.213541 -0.147803 -0.963989 -0.057276 center 0.000 0.000 -0.000 ntor 6 -32.9493 -3.2343 19.6942 -78.3202 83.0996 -70.7581
+State:	 29.768  -3.540  10.830  -0.214 -0.148 -0.966 -173.433    -32.95   -3.23   19.69  -78.32   83.10  -70.76
+
+DOCKED: MODEL        1
+DOCKED: USER    Run = 1
+DOCKED: USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.09 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    5.46 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -4.88 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -4.03 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.84 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.44 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.44 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+DOCKED: USER    NEWDPF about 0.000100 0.000100 -0.000100
+DOCKED: USER    NEWDPF tran0 29.768313 -3.539760 10.829955
+DOCKED: USER    NEWDPF quaternion0 -0.213541 -0.147803 -0.963989 -0.057276
+DOCKED: USER    NEWDPF axisangle0 -0.213892 -0.148046 -0.965574 -173.433113
+DOCKED: USER    NEWDPF quat0 -0.213892 -0.148046 -0.965574 -173.433113
+DOCKED: USER    NEWDPF dihe0 -32.95 -3.23 19.69 -78.32 83.10 -70.76 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  6 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: N_1  and  C_2 
+DOCKED: REMARK    2  A    between atoms: C_2  and  C_6 
+DOCKED: REMARK    3  A    between atoms: C_6  and  O_11 
+DOCKED: REMARK    4  A    between atoms: C_7  and  C_8 
+DOCKED: REMARK    5  A    between atoms: C_7  and  C_9 
+DOCKED: REMARK    6  A    between atoms: C_8  and  O_11 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C   UNK            30.428  -3.668  10.599 -0.21 +0.13    +0.206 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK            31.275  -2.653   9.859 -0.14 +0.02    +0.262 C 
+DOCKED: BRANCH   2   3
+DOCKED: ATOM      3  N   UNK            32.344  -2.110  10.797 -0.26 +0.04    -0.077 N 
+DOCKED: ATOM      4  C   UNK            33.475  -3.120  10.917 -0.08 -0.16    +0.271 C 
+DOCKED: ATOM      5  C   UNK            32.889  -0.802  10.242 -0.17 -0.32    +0.271 C 
+DOCKED: ATOM      6  C   UNK            31.735  -1.863  12.170 -0.28 -0.10    +0.271 C 
+DOCKED: ENDBRANCH   2   3
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1   7
+DOCKED: ATOM      7  O   UNK            29.183  -3.081  10.953 -0.61 -0.54    -0.320 OA
+DOCKED: BRANCH   7   8
+DOCKED: ATOM      8  C   UNK            28.089  -3.539  10.266 -0.27 +0.31    +0.258 C 
+DOCKED: ATOM      9  O   UNK            27.455  -4.552  10.532 -0.76 -0.33    -0.265 OA
+DOCKED: BRANCH   8  10
+DOCKED: ATOM     10  C   UNK            27.786  -2.596   9.125 -0.38 +0.10    +0.111 C 
+DOCKED: BRANCH  10  11
+DOCKED: ATOM     11  C   UNK            26.639  -3.102   8.254 -0.40 +0.00    +0.005 C 
+DOCKED: ATOM     12  C   UNK            25.801  -1.955   7.713 -0.46 +0.00    +0.005 C 
+DOCKED: ENDBRANCH  10  11
+DOCKED: ENDBRANCH   8  10
+DOCKED: ENDBRANCH   7   8
+DOCKED: ENDBRANCH   1   7
+DOCKED: TORSDOF 6
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 2 of 10
+Run: 2 Seed: 1120535344 2059796924 [ Run 2 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -5.189
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 30.072 -2.982 10.318 quatxyzw -0.171965 0.539934 -0.809333 -0.154533 center 0.000 0.000 -0.000 ntor 6 -85.5600 7.6144 -179.0022 -9.0702 152.2627 -15.1188
+State:	 30.072  -2.982  10.318  -0.174  0.546 -0.819 -162.221    -85.56    7.61 -179.00   -9.07  152.26  -15.12
+
+DOCKED: MODEL        2
+DOCKED: USER    Run = 2
+DOCKED: USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.01 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    6.17 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -4.80 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -3.75 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.06 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.38 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.38 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+DOCKED: USER    NEWDPF about 0.000100 0.000100 -0.000100
+DOCKED: USER    NEWDPF tran0 30.072003 -2.982176 10.318038
+DOCKED: USER    NEWDPF quaternion0 -0.171965 0.539934 -0.809333 -0.154533
+DOCKED: USER    NEWDPF axisangle0 -0.174056 0.546498 -0.819173 -162.220592
+DOCKED: USER    NEWDPF quat0 -0.174056 0.546498 -0.819173 -162.220592
+DOCKED: USER    NEWDPF dihe0 -85.56 7.61 -179.00 -9.07 152.26 -15.12 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  6 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: N_1  and  C_2 
+DOCKED: REMARK    2  A    between atoms: C_2  and  C_6 
+DOCKED: REMARK    3  A    between atoms: C_6  and  O_11 
+DOCKED: REMARK    4  A    between atoms: C_7  and  C_8 
+DOCKED: REMARK    5  A    between atoms: C_7  and  C_9 
+DOCKED: REMARK    6  A    between atoms: C_8  and  O_11 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C   UNK            30.707  -2.765  10.086 -0.21 +0.08    +0.206 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK            31.655  -1.906  10.899 -0.26 -0.05    +0.262 C 
+DOCKED: BRANCH   2   3
+DOCKED: ATOM      3  N   UNK            32.969  -1.755  10.145 -0.23 +0.06    -0.077 N 
+DOCKED: ATOM      4  C   UNK            34.106  -2.311  10.991 -0.04 -0.32    +0.271 C 
+DOCKED: ATOM      5  C   UNK            32.891  -2.522   8.833 -0.07 -0.08    +0.271 C 
+DOCKED: ATOM      6  C   UNK            33.223  -0.282   9.858 -0.12 -0.34    +0.271 C 
+DOCKED: ENDBRANCH   2   3
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1   7
+DOCKED: ATOM      7  O   UNK            29.548  -3.053  10.855 -0.72 -0.44    -0.320 OA
+DOCKED: BRANCH   7   8
+DOCKED: ATOM      8  C   UNK            28.473  -3.539  10.157 -0.26 +0.30    +0.258 C 
+DOCKED: ATOM      9  O   UNK            27.603  -4.271  10.611 -0.71 -0.32    -0.265 OA
+DOCKED: BRANCH   8  10
+DOCKED: ATOM     10  C   UNK            28.528  -3.029   8.736 -0.32 +0.07    +0.111 C 
+DOCKED: BRANCH  10  11
+DOCKED: ATOM     11  C   UNK            27.276  -3.400   7.946 -0.37 +0.00    +0.005 C 
+DOCKED: ATOM     12  C   UNK            26.233  -2.295   8.003 -0.44 +0.00    +0.005 C 
+DOCKED: ENDBRANCH  10  11
+DOCKED: ENDBRANCH   8  10
+DOCKED: ENDBRANCH   7   8
+DOCKED: ENDBRANCH   1   7
+DOCKED: TORSDOF 6
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 3 of 10
+Run: 3 Seed: 142588336 1764593439 [ Run 3 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -5.756
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 22.903 -9.119 6.394 quatxyzw 0.367839 0.025616 -0.747818 -0.552094 center 0.000 0.000 -0.000 ntor 6 82.3452 -148.7202 -78.2760 18.4864 -47.2855 -90.3587
+State:	 22.903  -9.119   6.394   0.441  0.031 -0.897 -112.978     82.35 -148.72  -78.28   18.49  -47.29  -90.36
+
+DOCKED: MODEL        3
+DOCKED: USER    Run = 3
+DOCKED: USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.41 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    3.15 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -5.20 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -5.44 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.23 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.55 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.55 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+DOCKED: USER    NEWDPF about 0.000100 0.000100 -0.000100
+DOCKED: USER    NEWDPF tran0 22.902716 -9.119046 6.393699
+DOCKED: USER    NEWDPF quaternion0 0.367839 0.025616 -0.747818 -0.552094
+DOCKED: USER    NEWDPF axisangle0 0.441169 0.030723 -0.896898 -112.978484
+DOCKED: USER    NEWDPF quat0 0.441169 0.030723 -0.896898 -112.978484
+DOCKED: USER    NEWDPF dihe0 82.35 -148.72 -78.28 18.49 -47.29 -90.36 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  6 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: N_1  and  C_2 
+DOCKED: REMARK    2  A    between atoms: C_2  and  C_6 
+DOCKED: REMARK    3  A    between atoms: C_6  and  O_11 
+DOCKED: REMARK    4  A    between atoms: C_7  and  C_8 
+DOCKED: REMARK    5  A    between atoms: C_7  and  C_9 
+DOCKED: REMARK    6  A    between atoms: C_8  and  O_11 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C   UNK            23.123  -8.642   6.872 -0.33 +0.05    +0.206 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK            22.401  -7.340   7.160 -0.36 +0.04    +0.262 C 
+DOCKED: BRANCH   2   3
+DOCKED: ATOM      3  N   UNK            23.375  -6.354   7.789 -0.35 -0.02    -0.077 N 
+DOCKED: ATOM      4  C   UNK            24.567  -7.110   8.357 -0.29 +0.10    +0.271 C 
+DOCKED: ATOM      5  C   UNK            23.855  -5.372   6.731 -0.22 +0.07    +0.271 C 
+DOCKED: ATOM      6  C   UNK            22.675  -5.594   8.907 -0.32 +0.05    +0.271 C 
+DOCKED: ENDBRANCH   2   3
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1   7
+DOCKED: ATOM      7  O   UNK            22.400  -9.381   5.897 -0.29 -0.07    -0.320 OA
+DOCKED: BRANCH   7   8
+DOCKED: ATOM      8  C   UNK            22.731  -9.133   4.591 -0.25 +0.08    +0.258 C 
+DOCKED: ATOM      9  O   UNK            22.860  -8.024   4.089 -0.87 -0.09    -0.265 OA
+DOCKED: BRANCH   8  10
+DOCKED: ATOM     10  C   UNK            22.914 -10.445   3.864 -0.57 +0.03    +0.111 C 
+DOCKED: BRANCH  10  11
+DOCKED: ATOM     11  C   UNK            22.030 -11.547   4.442 -0.74 +0.00    +0.005 C 
+DOCKED: ATOM     12  C   UNK            22.806 -12.442   5.394 -0.84 +0.00    +0.005 C 
+DOCKED: ENDBRANCH  10  11
+DOCKED: ENDBRANCH   8  10
+DOCKED: ENDBRANCH   7   8
+DOCKED: ENDBRANCH   1   7
+DOCKED: TORSDOF 6
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 4 of 10
+Run: 4 Seed: 471940247 29972175 [ Run 4 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -5.703
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 22.419 -8.157 5.152 quatxyzw -0.216264 0.609583 -0.297555 -0.702210 center 0.000 0.000 -0.000 ntor 6 -110.3217 -121.2015 81.8669 -44.1698 -10.0629 21.2799
+State:	 22.419  -8.157   5.152  -0.304  0.856 -0.418 -90.791   -110.32 -121.20   81.87  -44.17  -10.06   21.28
+
+DOCKED: MODEL        4
+DOCKED: USER    Run = 4
+DOCKED: USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.44 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    3.03 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -5.23 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -5.45 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.22 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.48 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.48 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+DOCKED: USER    NEWDPF about 0.000100 0.000100 -0.000100
+DOCKED: USER    NEWDPF tran0 22.419155 -8.156618 5.151665
+DOCKED: USER    NEWDPF quaternion0 -0.216264 0.609583 -0.297555 -0.702210
+DOCKED: USER    NEWDPF axisangle0 -0.303755 0.856193 -0.417932 -90.790826
+DOCKED: USER    NEWDPF quat0 -0.303755 0.856193 -0.417932 -90.790826
+DOCKED: USER    NEWDPF dihe0 -110.32 -121.20 81.87 -44.17 -10.06 21.28 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  6 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: N_1  and  C_2 
+DOCKED: REMARK    2  A    between atoms: C_2  and  C_6 
+DOCKED: REMARK    3  A    between atoms: C_6  and  O_11 
+DOCKED: REMARK    4  A    between atoms: C_7  and  C_8 
+DOCKED: REMARK    5  A    between atoms: C_7  and  C_9 
+DOCKED: REMARK    6  A    between atoms: C_8  and  O_11 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C   UNK            22.412  -7.561   5.538 -0.32 +0.05    +0.206 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK            22.174  -7.528   7.035 -0.37 +0.03    +0.262 C 
+DOCKED: BRANCH   2   3
+DOCKED: ATOM      3  N   UNK            23.121  -6.520   7.672 -0.36 -0.02    -0.077 N 
+DOCKED: ATOM      4  C   UNK            22.390  -5.760   8.769 -0.31 +0.05    +0.271 C 
+DOCKED: ATOM      5  C   UNK            24.313  -7.252   8.270 -0.29 +0.09    +0.271 C 
+DOCKED: ATOM      6  C   UNK            23.607  -5.540   6.613 -0.22 +0.07    +0.271 C 
+DOCKED: ENDBRANCH   2   3
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1   7
+DOCKED: ATOM      7  O   UNK            22.403  -8.907   5.085 -0.52 -0.09    -0.320 OA
+DOCKED: BRANCH   7   8
+DOCKED: ATOM      8  C   UNK            23.033  -9.141   3.891 -0.26 +0.09    +0.258 C 
+DOCKED: ATOM      9  O   UNK            23.438  -8.280   3.120 -0.74 -0.08    -0.265 OA
+DOCKED: BRANCH   8  10
+DOCKED: ATOM     10  C   UNK            23.152 -10.631   3.672 -0.57 +0.03    +0.111 C 
+DOCKED: BRANCH  10  11
+DOCKED: ATOM     11  C   UNK            21.791 -11.322   3.689 -0.73 +0.00    +0.005 C 
+DOCKED: ATOM     12  C   UNK            20.953 -10.934   2.481 -0.74 +0.00    +0.005 C 
+DOCKED: ENDBRANCH  10  11
+DOCKED: ENDBRANCH   8  10
+DOCKED: ENDBRANCH   7   8
+DOCKED: ENDBRANCH   1   7
+DOCKED: TORSDOF 6
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 5 of 10
+Run: 5 Seed: 1188854841 1020784951 [ Run 5 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -5.240
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 25.864 -5.654 10.011 quatxyzw 0.590014 0.052057 0.333809 -0.733311 center 0.000 0.000 -0.000 ntor 6 -103.0273 -159.7944 170.7889 58.0348 -72.4385 -177.8222
+State:	 25.864  -5.654  10.011   0.868  0.077  0.491 -85.671   -103.03 -159.79  170.79   58.03  -72.44 -177.82
+
+DOCKED: MODEL        5
+DOCKED: USER    Run = 5
+DOCKED: USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -2.86 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    8.06 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -4.65 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -4.73 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.09 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.59 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.59 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+DOCKED: USER    NEWDPF about 0.000100 0.000100 -0.000100
+DOCKED: USER    NEWDPF tran0 25.864097 -5.654237 10.010747
+DOCKED: USER    NEWDPF quaternion0 0.590014 0.052057 0.333809 -0.733311
+DOCKED: USER    NEWDPF axisangle0 0.867803 0.076567 0.490973 -85.670666
+DOCKED: USER    NEWDPF quat0 0.867803 0.076567 0.490973 -85.670666
+DOCKED: USER    NEWDPF dihe0 -103.03 -159.79 170.79 58.03 -72.44 -177.82 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  6 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: N_1  and  C_2 
+DOCKED: REMARK    2  A    between atoms: C_2  and  C_6 
+DOCKED: REMARK    3  A    between atoms: C_6  and  O_11 
+DOCKED: REMARK    4  A    between atoms: C_7  and  C_8 
+DOCKED: REMARK    5  A    between atoms: C_7  and  C_9 
+DOCKED: REMARK    6  A    between atoms: C_8  and  O_11 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C   UNK            25.268  -6.037   9.957 -0.35 +0.13    +0.206 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK            24.832  -6.748   8.691 -0.31 +0.12    +0.262 C 
+DOCKED: BRANCH   2   3
+DOCKED: ATOM      3  N   UNK            23.496  -6.181   8.232 -0.35 -0.02    -0.077 N 
+DOCKED: ATOM      4  C   UNK            22.529  -7.323   7.953 -0.37 +0.04    +0.271 C 
+DOCKED: ATOM      5  C   UNK            22.923  -5.286   9.321 -0.30 +0.04    +0.271 C 
+DOCKED: ATOM      6  C   UNK            23.700  -5.368   6.961 -0.23 +0.07    +0.271 C 
+DOCKED: ENDBRANCH   2   3
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1   7
+DOCKED: ATOM      7  O   UNK            26.520  -5.401   9.739 -0.78 -0.31    -0.320 OA
+DOCKED: BRANCH   7   8
+DOCKED: ATOM      8  C   UNK            27.035  -5.513   8.474 -0.22 +0.19    +0.258 C 
+DOCKED: ATOM      9  O   UNK            27.511  -6.530   7.988 -0.71 -0.21    -0.265 OA
+DOCKED: BRANCH   8  10
+DOCKED: ATOM     10  C   UNK            26.924  -4.181   7.770 -0.28 +0.04    +0.111 C 
+DOCKED: BRANCH  10  11
+DOCKED: ATOM     11  C   UNK            26.734  -3.028   8.753 -0.38 +0.00    +0.005 C 
+DOCKED: ATOM     12  C   UNK            28.034  -2.677   9.458 -0.45 +0.01    +0.005 C 
+DOCKED: ENDBRANCH  10  11
+DOCKED: ENDBRANCH   8  10
+DOCKED: ENDBRANCH   7   8
+DOCKED: ENDBRANCH   1   7
+DOCKED: TORSDOF 6
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 6 of 10
+Run: 6 Seed: 329913444 1706487997 [ Run 6 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -5.570
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 22.575 -8.810 5.276 quatxyzw -0.512434 0.128997 0.767102 0.363765 center 0.000 0.000 -0.000 ntor 6 85.7684 172.3393 -10.1760 -16.9735 -66.3114 -69.5052
+State:	 22.575  -8.810   5.276  -0.550  0.138  0.824 137.337     85.77  172.34  -10.18  -16.97  -66.31  -69.51
+
+DOCKED: MODEL        6
+DOCKED: USER    Run = 6
+DOCKED: USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.31 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    3.76 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -5.10 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -5.29 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.19 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.47 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.47 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+DOCKED: USER    NEWDPF about 0.000100 0.000100 -0.000100
+DOCKED: USER    NEWDPF tran0 22.575039 -8.809571 5.275713
+DOCKED: USER    NEWDPF quaternion0 -0.512434 0.128997 0.767102 0.363765
+DOCKED: USER    NEWDPF axisangle0 -0.550123 0.138485 0.823521 137.336843
+DOCKED: USER    NEWDPF quat0 -0.550123 0.138485 0.823521 137.336843
+DOCKED: USER    NEWDPF dihe0 85.77 172.34 -10.18 -16.97 -66.31 -69.51 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  6 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: N_1  and  C_2 
+DOCKED: REMARK    2  A    between atoms: C_2  and  C_6 
+DOCKED: REMARK    3  A    between atoms: C_6  and  O_11 
+DOCKED: REMARK    4  A    between atoms: C_7  and  C_8 
+DOCKED: REMARK    5  A    between atoms: C_7  and  C_9 
+DOCKED: REMARK    6  A    between atoms: C_8  and  O_11 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C   UNK            22.776  -8.462   5.862 -0.21 +0.06    +0.206 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK            22.576  -6.974   6.071 -0.25 +0.06    +0.262 C 
+DOCKED: BRANCH   2   3
+DOCKED: ATOM      3  N   UNK            22.807  -6.638   7.538 -0.39 -0.01    -0.077 N 
+DOCKED: ATOM      4  C   UNK            24.109  -7.270   8.005 -0.27 +0.08    +0.271 C 
+DOCKED: ATOM      5  C   UNK            22.888  -5.127   7.705 -0.27 +0.05    +0.271 C 
+DOCKED: ATOM      6  C   UNK            21.652  -7.178   8.370 -0.30 +0.02    +0.271 C 
+DOCKED: ENDBRANCH   2   3
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1   7
+DOCKED: ATOM      7  O   UNK            22.227  -8.844   4.608 -0.45 -0.08    -0.320 OA
+DOCKED: BRANCH   7   8
+DOCKED: ATOM      8  C   UNK            23.132  -9.205   3.644 -0.33 +0.08    +0.258 C 
+DOCKED: ATOM      9  O   UNK            23.946  -8.457   3.117 -0.66 -0.08    -0.265 OA
+DOCKED: BRANCH   8  10
+DOCKED: ATOM     10  C   UNK            22.969 -10.674   3.331 -0.58 +0.02    +0.111 C 
+DOCKED: BRANCH  10  11
+DOCKED: ATOM     11  C   UNK            22.018 -11.364   4.306 -0.74 +0.00    +0.005 C 
+DOCKED: ATOM     12  C   UNK            22.773 -12.035   5.442 -0.84 +0.00    +0.005 C 
+DOCKED: ENDBRANCH  10  11
+DOCKED: ENDBRANCH   8  10
+DOCKED: ENDBRANCH   7   8
+DOCKED: ENDBRANCH   1   7
+DOCKED: TORSDOF 6
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 7 of 10
+Run: 7 Seed: 677832109 93849939 [ Run 7 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -5.210
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 32.144 -1.748 10.880 quatxyzw -0.060670 -0.313721 -0.874986 -0.363729 center 0.000 0.000 -0.000 ntor 6 58.7141 -16.7285 47.2021 28.4744 -168.8788 26.6868
+State:	 32.144  -1.748  10.880  -0.065 -0.337 -0.939 -137.341     58.71  -16.73   47.20   28.47 -168.88   26.69
+
+DOCKED: MODEL        7
+DOCKED: USER    Run = 7
+DOCKED: USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.02 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    6.10 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -4.81 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -3.39 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -1.42 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.40 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.40 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+DOCKED: USER    NEWDPF about 0.000100 0.000100 -0.000100
+DOCKED: USER    NEWDPF tran0 32.143516 -1.748259 10.879915
+DOCKED: USER    NEWDPF quaternion0 -0.060670 -0.313721 -0.874986 -0.363729
+DOCKED: USER    NEWDPF axisangle0 -0.065131 -0.336789 -0.939325 -137.341265
+DOCKED: USER    NEWDPF quat0 -0.065131 -0.336789 -0.939325 -137.341265
+DOCKED: USER    NEWDPF dihe0 58.71 -16.73 47.20 28.47 -168.88 26.69 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  6 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: N_1  and  C_2 
+DOCKED: REMARK    2  A    between atoms: C_2  and  C_6 
+DOCKED: REMARK    3  A    between atoms: C_6  and  O_11 
+DOCKED: REMARK    4  A    between atoms: C_7  and  C_8 
+DOCKED: REMARK    5  A    between atoms: C_7  and  C_9 
+DOCKED: REMARK    6  A    between atoms: C_8  and  O_11 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C   UNK            32.761  -1.419  10.755 -0.20 -0.22    +0.206 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK            32.901  -0.194   9.874 -0.10 -0.31    +0.262 C 
+DOCKED: BRANCH   2   3
+DOCKED: ATOM      3  N   UNK            34.265  -0.214   9.199 -0.21 +0.07    -0.077 N 
+DOCKED: ATOM      4  C   UNK            34.101  -0.582   7.732 -0.10 -0.12    +0.271 C 
+DOCKED: ATOM      5  C   UNK            34.905   1.163   9.308 -0.12 -0.27    +0.271 C 
+DOCKED: ATOM      6  C   UNK            35.155  -1.242   9.885 -0.06 -0.29    +0.271 C 
+DOCKED: ENDBRANCH   2   3
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1   7
+DOCKED: ATOM      7  O   UNK            31.394  -1.801  10.825 -0.32 +0.02    -0.320 OA
+DOCKED: BRANCH   7   8
+DOCKED: ATOM      8  C   UNK            31.018  -2.475  11.957 -0.24 +0.11    +0.258 C 
+DOCKED: ATOM      9  O   UNK            29.951  -3.051  12.120 -0.72 -0.34    -0.265 OA
+DOCKED: BRANCH   8  10
+DOCKED: ATOM     10  C   UNK            32.131  -2.398  12.977 -0.31 -0.07    +0.111 C 
+DOCKED: BRANCH  10  11
+DOCKED: ATOM     11  C   UNK            31.643  -2.734  14.384 -0.43 -0.00    +0.005 C 
+DOCKED: ATOM     12  C   UNK            31.916  -1.598  15.355 -0.57 -0.00    +0.005 C 
+DOCKED: ENDBRANCH  10  11
+DOCKED: ENDBRANCH   8  10
+DOCKED: ENDBRANCH   7   8
+DOCKED: ENDBRANCH   1   7
+DOCKED: TORSDOF 6
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 8 of 10
+Run: 8 Seed: 1060990136 1641700953 [ Run 8 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -5.683
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 22.894 -9.195 5.817 quatxyzw 0.718707 0.000728 -0.605549 -0.341715 center 0.000 0.000 -0.000 ntor 6 138.7726 77.7308 -87.4071 71.9876 -2.7928 27.9436
+State:	 22.894  -9.195   5.817   0.765  0.001 -0.644 -140.037    138.77   77.73  -87.41   71.99   -2.79   27.94
+
+DOCKED: MODEL        8
+DOCKED: USER    Run = 8
+DOCKED: USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.45 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    2.97 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -5.24 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -5.42 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.19 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.45 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.45 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+DOCKED: USER    NEWDPF about 0.000100 0.000100 -0.000100
+DOCKED: USER    NEWDPF tran0 22.893861 -9.194962 5.816799
+DOCKED: USER    NEWDPF quaternion0 0.718707 0.000728 -0.605549 -0.341715
+DOCKED: USER    NEWDPF axisangle0 0.764742 0.000775 -0.644336 -140.037173
+DOCKED: USER    NEWDPF quat0 0.764742 0.000775 -0.644336 -140.037173
+DOCKED: USER    NEWDPF dihe0 138.77 77.73 -87.41 71.99 -2.79 27.94 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  6 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: N_1  and  C_2 
+DOCKED: REMARK    2  A    between atoms: C_2  and  C_6 
+DOCKED: REMARK    3  A    between atoms: C_6  and  O_11 
+DOCKED: REMARK    4  A    between atoms: C_7  and  C_8 
+DOCKED: REMARK    5  A    between atoms: C_7  and  C_9 
+DOCKED: REMARK    6  A    between atoms: C_8  and  O_11 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C   UNK            22.765  -9.056   6.502 -0.35 +0.04    +0.206 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK            22.038  -7.819   6.990 -0.34 +0.03    +0.262 C 
+DOCKED: BRANCH   2   3
+DOCKED: ATOM      3  N   UNK            23.045  -6.847   7.587 -0.38 -0.02    -0.077 N 
+DOCKED: ATOM      4  C   UNK            24.230  -7.621   8.144 -0.28 +0.08    +0.271 C 
+DOCKED: ATOM      5  C   UNK            23.528  -5.891   6.505 -0.21 +0.07    +0.271 C 
+DOCKED: ATOM      6  C   UNK            22.384  -6.054   8.705 -0.32 +0.05    +0.271 C 
+DOCKED: ENDBRANCH   2   3
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1   7
+DOCKED: ATOM      7  O   UNK            22.818  -9.047   5.082 -0.71 -0.11    -0.320 OA
+DOCKED: BRANCH   7   8
+DOCKED: ATOM      8  C   UNK            22.880 -10.275   4.477 -0.36 +0.07    +0.258 C 
+DOCKED: ATOM      9  O   UNK            22.941 -11.351   5.058 -0.51 -0.05    -0.265 OA
+DOCKED: BRANCH   8  10
+DOCKED: ATOM     10  C   UNK            22.863 -10.095   2.977 -0.59 +0.02    +0.111 C 
+DOCKED: BRANCH  10  11
+DOCKED: ATOM     11  C   UNK            21.497 -10.422   2.377 -0.65 +0.00    +0.005 C 
+DOCKED: ATOM     12  C   UNK            20.902 -11.676   2.996 -0.73 +0.00    +0.005 C 
+DOCKED: ENDBRANCH  10  11
+DOCKED: ENDBRANCH   8  10
+DOCKED: ENDBRANCH   7   8
+DOCKED: ENDBRANCH   1   7
+DOCKED: TORSDOF 6
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 9 of 10
+Run: 9 Seed: 1514160914 751152505 [ Run 9 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -5.495
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 25.847 -6.509 9.278 quatxyzw 0.574870 0.021387 0.219003 -0.788102 center 0.000 0.000 -0.000 ntor 6 -1.7917 -78.5185 178.5959 47.3031 83.7154 -56.1639
+State:	 25.847  -6.509   9.278   0.934  0.035  0.356 -75.983     -1.79  -78.52  178.60   47.30   83.72  -56.16
+
+DOCKED: MODEL        9
+DOCKED: USER    Run = 9
+DOCKED: USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -3.10 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    5.36 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -4.89 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -4.84 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.04 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.61 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.61 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+DOCKED: USER    NEWDPF about 0.000100 0.000100 -0.000100
+DOCKED: USER    NEWDPF tran0 25.847243 -6.509457 9.278412
+DOCKED: USER    NEWDPF quaternion0 0.574870 0.021387 0.219003 -0.788102
+DOCKED: USER    NEWDPF axisangle0 0.933921 0.034745 0.355788 -75.983056
+DOCKED: USER    NEWDPF quat0 0.933921 0.034745 0.355788 -75.983056
+DOCKED: USER    NEWDPF dihe0 -1.79 -78.52 178.60 47.30 83.72 -56.16 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  6 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: N_1  and  C_2 
+DOCKED: REMARK    2  A    between atoms: C_2  and  C_6 
+DOCKED: REMARK    3  A    between atoms: C_6  and  O_11 
+DOCKED: REMARK    4  A    between atoms: C_7  and  C_8 
+DOCKED: REMARK    5  A    between atoms: C_7  and  C_9 
+DOCKED: REMARK    6  A    between atoms: C_8  and  O_11 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C   UNK            25.175  -6.740   9.297 -0.35 +0.12    +0.206 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK            24.481  -7.411   8.128 -0.26 +0.09    +0.262 C 
+DOCKED: BRANCH   2   3
+DOCKED: ATOM      3  N   UNK            23.144  -6.728   7.879 -0.37 -0.02    -0.077 N 
+DOCKED: ATOM      4  C   UNK            22.024  -7.754   7.969 -0.38 +0.02    +0.271 C 
+DOCKED: ATOM      5  C   UNK            22.925  -5.646   8.927 -0.32 +0.05    +0.271 C 
+DOCKED: ATOM      6  C   UNK            23.146  -6.099   6.493 -0.22 +0.06    +0.271 C 
+DOCKED: ENDBRANCH   2   3
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1   7
+DOCKED: ATOM      7  O   UNK            26.519  -6.441   8.944 -0.75 -0.34    -0.320 OA
+DOCKED: BRANCH   7   8
+DOCKED: ATOM      8  C   UNK            26.892  -5.128   9.067 -0.24 +0.20    +0.258 C 
+DOCKED: ATOM      9  O   UNK            27.269  -4.590  10.100 -0.84 -0.28    -0.265 OA
+DOCKED: BRANCH   8  10
+DOCKED: ATOM     10  C   UNK            26.766  -4.445   7.725 -0.28 +0.04    +0.111 C 
+DOCKED: BRANCH  10  11
+DOCKED: ATOM     11  C   UNK            25.485  -3.621   7.620 -0.36 +0.00    +0.005 C 
+DOCKED: ATOM     12  C   UNK            25.406  -2.880   6.295 -0.46 +0.00    +0.005 C 
+DOCKED: ENDBRANCH  10  11
+DOCKED: ENDBRANCH   8  10
+DOCKED: ENDBRANCH   7   8
+DOCKED: ENDBRANCH   1   7
+DOCKED: TORSDOF 6
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 10 of 10
+Run: 10 Seed: 279606927 1147156981 [ Run 10 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -5.122
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 24.389 -4.925 5.922 quatxyzw 0.276140 -0.257052 -0.373336 0.847521 center 0.000 0.000 -0.000 ntor 6 -110.0959 27.6311 93.0796 44.5778 -127.4010 61.0413
+State:	 24.389  -4.925   5.922   0.520 -0.484 -0.703 64.114   -110.10   27.63   93.08   44.58 -127.40   61.04
+
+DOCKED: MODEL       10
+DOCKED: USER    Run = 10
+DOCKED: USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -2.90 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =    7.43 mM (millimolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -4.69 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -4.80 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.11 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.43 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.43 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+DOCKED: USER    NEWDPF about 0.000100 0.000100 -0.000100
+DOCKED: USER    NEWDPF tran0 24.388664 -4.925100 5.921707
+DOCKED: USER    NEWDPF quaternion0 0.276140 -0.257052 -0.373336 0.847521
+DOCKED: USER    NEWDPF axisangle0 0.520270 -0.484308 -0.703396 64.113959
+DOCKED: USER    NEWDPF quat0 0.520270 -0.484308 -0.703396 64.113959
+DOCKED: USER    NEWDPF dihe0 -110.10 27.63 93.08 44.58 -127.40 61.04 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  6 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: N_1  and  C_2 
+DOCKED: REMARK    2  A    between atoms: C_2  and  C_6 
+DOCKED: REMARK    3  A    between atoms: C_6  and  O_11 
+DOCKED: REMARK    4  A    between atoms: C_7  and  C_8 
+DOCKED: REMARK    5  A    between atoms: C_7  and  C_9 
+DOCKED: REMARK    6  A    between atoms: C_8  and  O_11 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  C   UNK            23.852  -5.149   6.330 -0.26 +0.06    +0.206 C 
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK            23.971  -6.273   7.340 -0.21 +0.07    +0.262 C 
+DOCKED: BRANCH   2   3
+DOCKED: ATOM      3  N   UNK            22.806  -7.236   7.159 -0.40 -0.01    -0.077 N 
+DOCKED: ATOM      4  C   UNK            23.226  -8.630   7.602 -0.27 +0.06    +0.271 C 
+DOCKED: ATOM      5  C   UNK            21.628  -6.770   8.002 -0.35 +0.03    +0.271 C 
+DOCKED: ATOM      6  C   UNK            22.399  -7.270   5.693 -0.27 +0.06    +0.271 C 
+DOCKED: ENDBRANCH   2   3
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1   7
+DOCKED: ATOM      7  O   UNK            25.113  -4.927   5.715 -0.48 -0.12    -0.320 OA
+DOCKED: BRANCH   7   8
+DOCKED: ATOM      8  C   UNK            25.654  -3.681   5.892 -0.26 +0.09    +0.258 C 
+DOCKED: ATOM      9  O   UNK            26.051  -2.944   4.999 -0.84 -0.15    -0.265 OA
+DOCKED: BRANCH   8  10
+DOCKED: ATOM     10  C   UNK            25.685  -3.355   7.367 -0.32 +0.03    +0.111 C 
+DOCKED: BRANCH  10  11
+DOCKED: ATOM     11  C   UNK            25.639  -1.851   7.623 -0.48 +0.00    +0.005 C 
+DOCKED: ATOM     12  C   UNK            24.290  -1.262   7.246 -0.66 +0.00    +0.005 C 
+DOCKED: ENDBRANCH  10  11
+DOCKED: ENDBRANCH   8  10
+DOCKED: ENDBRANCH   7   8
+DOCKED: ENDBRANCH   1   7
+DOCKED: TORSDOF 6
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+DPF> analysis                             # perform a ranked cluster analysis
+
+
+		CLUSTER ANALYSIS OF CONFORMATIONS
+		_________________________________
+
+Number of conformations = 10
+
+RMSD cluster analysis will be performed using the ligand atoms only (12 / 12 total atoms).
+
+Outputting structurally similar clusters, ranked in order of increasing energy.
+
+
+________________________________________________________________________________
+
+Number of distinct conformational clusters found = 5,  out of 10 runs,
+Using an rmsd-tolerance of 2.0 A
+
+
+	CLUSTERING HISTOGRAM
+	____________________
+
+________________________________________________________________________________
+     |           |     |           |     |                                    
+Clus | Lowest    | Run | Mean      | Num | Histogram                          
+-ter | Binding   |     | Binding   | in  |                                    
+Rank | Energy    |     | Energy    | Clus|    5    10   15   20   25   30   35
+_____|___________|_____|___________|_____|____:____|____:____|____:____|____:___
+   1 |     -3.45 |   8 |     -3.40 |   4 |####
+   2 |     -3.10 |   9 |     -2.98 |   2 |##
+   3 |     -3.09 |   1 |     -3.05 |   2 |##
+   4 |     -3.02 |   7 |     -3.02 |   1 |#
+   5 |     -2.90 |  10 |     -2.90 |   1 |#
+_____|___________|_____|___________|_____|______________________________________
+
+
+Number of multi-member conformational clusters found = 3, out of 10 runs.
+
+	RMSD TABLE
+	__________
+
+_____________________________________________________________________
+     |      |      |           |         |                 |
+Rank | Sub- | Run  | Binding   | Cluster | Reference       | Grep
+     | Rank |      | Energy    | RMSD    | RMSD            | Pattern
+_____|______|______|___________|_________|_________________|___________
+   1      1      8       -3.45      0.00     21.63           RANKING
+   1      2      4       -3.44      1.02     21.43           RANKING
+   1      3      3       -3.41      1.12     21.86           RANKING
+   1      4      6       -3.31      1.32     21.61           RANKING
+   2      1      9       -3.10      0.00     23.33           RANKING
+   2      2      5       -2.86      1.23     23.87           RANKING
+   3      1      1       -3.09      0.00     28.04           RANKING
+   3      2      2       -3.01      0.94     28.37           RANKING
+   4      1      7       -3.02      0.00     30.99           RANKING
+   5      1     10       -2.90      0.00     22.05           RANKING
+_______________________________________________________________________
+
+
+
+	INFORMATION ENTROPY ANALYSIS FOR THIS CLUSTERING
+	________________________________________________
+
+
+Information entropy for this clustering = 0.64  (rmstol = 2.00 Angstrom)
+
+_______________________________________________________________________
+
+
+	STATISTICAL MECHANICAL ANALYSIS
+	_______________________________
+
+
+Partition function, Q =    10.05            at Temperature, T = 298.15 K
+Free energy,        A ~ -1367.40 kcal/mol   at Temperature, T = 298.15 K
+Internal energy,    U =    -3.16 kcal/mol   at Temperature, T = 298.15 K
+Entropy,            S =     4.58 kcal/mol/K at Temperature, T = 298.15 K
+
+_______________________________________________________________________
+
+
+	LOWEST ENERGY DOCKED CONFORMATION from EACH CLUSTER
+	___________________________________________________
+
+
+
+Keeping original residue number (specified in the input PDBQ file) for outputting.
+
+MODEL        8
+USER    Run = 8
+USER    Cluster Rank = 1
+USER    Number of conformations in this cluster = 4
+USER  
+USER    RMSD from reference structure       = 21.631 A
+USER  
+USER    Estimated Free Energy of Binding    =   -3.45 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    2.97 mM (millimolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -5.24 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -5.42 kcal/mol
+USER        Electrostatic Energy            =   +0.19 kcal/mol
+USER    (2) Final Total Internal Energy     =   -0.45 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -0.45 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+USER    NEWDPF move	F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+USER    NEWDPF about	0.000100 0.000100 -0.000100
+USER    NEWDPF tran0	22.893861 -9.194962 5.816799
+USER    NEWDPF axisangle0	0.764742 0.000775 -0.644336 -140.037173
+USER    NEWDPF quaternion0	0.718707 0.000728 -0.605549 -0.341715
+USER    NEWDPF dihe0	138.77 77.73 -87.41 71.99 -2.79 27.94 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C   UNK            22.765  -9.056   6.502 -0.35 +0.04    +0.206    21.631
+ATOM      2  C   UNK            22.038  -7.819   6.990 -0.34 +0.03    +0.262    21.631
+ATOM      3  N   UNK            23.045  -6.847   7.587 -0.38 -0.02    -0.077    21.631
+ATOM      4  C   UNK            24.230  -7.621   8.144 -0.28 +0.08    +0.271    21.631
+ATOM      5  C   UNK            23.528  -5.891   6.505 -0.21 +0.07    +0.271    21.631
+ATOM      6  C   UNK            22.384  -6.054   8.705 -0.32 +0.05    +0.271    21.631
+ATOM      7  O   UNK            22.818  -9.047   5.082 -0.71 -0.11    -0.320    21.631
+ATOM      8  C   UNK            22.880 -10.275   4.477 -0.36 +0.07    +0.258    21.631
+ATOM      9  O   UNK            22.941 -11.351   5.058 -0.51 -0.05    -0.265    21.631
+ATOM     10  C   UNK            22.863 -10.095   2.977 -0.59 +0.02    +0.111    21.631
+ATOM     11  C   UNK            21.497 -10.422   2.377 -0.65 +0.00    +0.005    21.631
+ATOM     12  C   UNK            20.902 -11.676   2.996 -0.73 +0.00    +0.005    21.631
+TER
+ENDMDL
+MODEL        9
+USER    Run = 9
+USER    Cluster Rank = 2
+USER    Number of conformations in this cluster = 2
+USER  
+USER    RMSD from reference structure       = 23.332 A
+USER  
+USER    Estimated Free Energy of Binding    =   -3.10 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    5.36 mM (millimolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -4.89 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -4.84 kcal/mol
+USER        Electrostatic Energy            =   -0.04 kcal/mol
+USER    (2) Final Total Internal Energy     =   -0.61 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -0.61 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+USER    NEWDPF move	F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+USER    NEWDPF about	0.000100 0.000100 -0.000100
+USER    NEWDPF tran0	25.847243 -6.509457 9.278412
+USER    NEWDPF axisangle0	0.933921 0.034745 0.355788 -75.983056
+USER    NEWDPF quaternion0	0.574870 0.021387 0.219003 -0.788102
+USER    NEWDPF dihe0	-1.79 -78.52 178.60 47.30 83.72 -56.16 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C   UNK            25.175  -6.740   9.297 -0.35 +0.12    +0.206    23.332
+ATOM      2  C   UNK            24.481  -7.411   8.128 -0.26 +0.09    +0.262    23.332
+ATOM      3  N   UNK            23.144  -6.728   7.879 -0.37 -0.02    -0.077    23.332
+ATOM      4  C   UNK            22.024  -7.754   7.969 -0.38 +0.02    +0.271    23.332
+ATOM      5  C   UNK            22.925  -5.646   8.927 -0.32 +0.05    +0.271    23.332
+ATOM      6  C   UNK            23.146  -6.099   6.493 -0.22 +0.06    +0.271    23.332
+ATOM      7  O   UNK            26.519  -6.441   8.944 -0.75 -0.34    -0.320    23.332
+ATOM      8  C   UNK            26.892  -5.128   9.067 -0.24 +0.20    +0.258    23.332
+ATOM      9  O   UNK            27.269  -4.590  10.100 -0.84 -0.28    -0.265    23.332
+ATOM     10  C   UNK            26.766  -4.445   7.725 -0.28 +0.04    +0.111    23.332
+ATOM     11  C   UNK            25.485  -3.621   7.620 -0.36 +0.00    +0.005    23.332
+ATOM     12  C   UNK            25.406  -2.880   6.295 -0.46 +0.00    +0.005    23.332
+TER
+ENDMDL
+MODEL        1
+USER    Run = 1
+USER    Cluster Rank = 3
+USER    Number of conformations in this cluster = 2
+USER  
+USER    RMSD from reference structure       = 28.039 A
+USER  
+USER    Estimated Free Energy of Binding    =   -3.09 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    5.46 mM (millimolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -4.88 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -4.03 kcal/mol
+USER        Electrostatic Energy            =   -0.84 kcal/mol
+USER    (2) Final Total Internal Energy     =   -0.44 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -0.44 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+USER    NEWDPF move	F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+USER    NEWDPF about	0.000100 0.000100 -0.000100
+USER    NEWDPF tran0	29.768313 -3.539760 10.829955
+USER    NEWDPF axisangle0	-0.213892 -0.148046 -0.965574 -173.433113
+USER    NEWDPF quaternion0	-0.213541 -0.147803 -0.963989 -0.057276
+USER    NEWDPF dihe0	-32.95 -3.23 19.69 -78.32 83.10 -70.76 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C   UNK            30.428  -3.668  10.599 -0.21 +0.13    +0.206    28.039
+ATOM      2  C   UNK            31.275  -2.653   9.859 -0.14 +0.02    +0.262    28.039
+ATOM      3  N   UNK            32.344  -2.110  10.797 -0.26 +0.04    -0.077    28.039
+ATOM      4  C   UNK            33.475  -3.120  10.917 -0.08 -0.16    +0.271    28.039
+ATOM      5  C   UNK            32.889  -0.802  10.242 -0.17 -0.32    +0.271    28.039
+ATOM      6  C   UNK            31.735  -1.863  12.170 -0.28 -0.10    +0.271    28.039
+ATOM      7  O   UNK            29.183  -3.081  10.953 -0.61 -0.54    -0.320    28.039
+ATOM      8  C   UNK            28.089  -3.539  10.266 -0.27 +0.31    +0.258    28.039
+ATOM      9  O   UNK            27.455  -4.552  10.532 -0.76 -0.33    -0.265    28.039
+ATOM     10  C   UNK            27.786  -2.596   9.125 -0.38 +0.10    +0.111    28.039
+ATOM     11  C   UNK            26.639  -3.102   8.254 -0.40 +0.00    +0.005    28.039
+ATOM     12  C   UNK            25.801  -1.955   7.713 -0.46 +0.00    +0.005    28.039
+TER
+ENDMDL
+MODEL        7
+USER    Run = 7
+USER    Cluster Rank = 4
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 30.990 A
+USER  
+USER    Estimated Free Energy of Binding    =   -3.02 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    6.10 mM (millimolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -4.81 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -3.39 kcal/mol
+USER        Electrostatic Energy            =   -1.42 kcal/mol
+USER    (2) Final Total Internal Energy     =   -0.40 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -0.40 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+USER    NEWDPF move	F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+USER    NEWDPF about	0.000100 0.000100 -0.000100
+USER    NEWDPF tran0	32.143516 -1.748259 10.879915
+USER    NEWDPF axisangle0	-0.065131 -0.336789 -0.939325 -137.341265
+USER    NEWDPF quaternion0	-0.060670 -0.313721 -0.874986 -0.363729
+USER    NEWDPF dihe0	58.71 -16.73 47.20 28.47 -168.88 26.69 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C   UNK            32.761  -1.419  10.755 -0.20 -0.22    +0.206    30.990
+ATOM      2  C   UNK            32.901  -0.194   9.874 -0.10 -0.31    +0.262    30.990
+ATOM      3  N   UNK            34.265  -0.214   9.199 -0.21 +0.07    -0.077    30.990
+ATOM      4  C   UNK            34.101  -0.582   7.732 -0.10 -0.12    +0.271    30.990
+ATOM      5  C   UNK            34.905   1.163   9.308 -0.12 -0.27    +0.271    30.990
+ATOM      6  C   UNK            35.155  -1.242   9.885 -0.06 -0.29    +0.271    30.990
+ATOM      7  O   UNK            31.394  -1.801  10.825 -0.32 +0.02    -0.320    30.990
+ATOM      8  C   UNK            31.018  -2.475  11.957 -0.24 +0.11    +0.258    30.990
+ATOM      9  O   UNK            29.951  -3.051  12.120 -0.72 -0.34    -0.265    30.990
+ATOM     10  C   UNK            32.131  -2.398  12.977 -0.31 -0.07    +0.111    30.990
+ATOM     11  C   UNK            31.643  -2.734  14.384 -0.43 -0.00    +0.005    30.990
+ATOM     12  C   UNK            31.916  -1.598  15.355 -0.57 -0.00    +0.005    30.990
+TER
+ENDMDL
+MODEL       10
+USER    Run = 10
+USER    Cluster Rank = 5
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 22.054 A
+USER  
+USER    Estimated Free Energy of Binding    =   -2.90 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =    7.43 mM (millimolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -4.69 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -4.80 kcal/mol
+USER        Electrostatic Energy            =   +0.11 kcal/mol
+USER    (2) Final Total Internal Energy     =   -0.43 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.79 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -0.43 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dpf
+USER    NEWDPF move	F:\Autodock\Autodock\Albumin\ButyrylCholine\BC10\BC.pdbqt
+USER    NEWDPF about	0.000100 0.000100 -0.000100
+USER    NEWDPF tran0	24.388664 -4.925100 5.921707
+USER    NEWDPF axisangle0	0.520270 -0.484308 -0.703396 64.113959
+USER    NEWDPF quaternion0	0.276140 -0.257052 -0.373336 0.847521
+USER    NEWDPF dihe0	-110.10 27.63 93.08 44.58 -127.40 61.04 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  C   UNK            23.852  -5.149   6.330 -0.26 +0.06    +0.206    22.054
+ATOM      2  C   UNK            23.971  -6.273   7.340 -0.21 +0.07    +0.262    22.054
+ATOM      3  N   UNK            22.806  -7.236   7.159 -0.40 -0.01    -0.077    22.054
+ATOM      4  C   UNK            23.226  -8.630   7.602 -0.27 +0.06    +0.271    22.054
+ATOM      5  C   UNK            21.628  -6.770   8.002 -0.35 +0.03    +0.271    22.054
+ATOM      6  C   UNK            22.399  -7.270   5.693 -0.27 +0.06    +0.271    22.054
+ATOM      7  O   UNK            25.113  -4.927   5.715 -0.48 -0.12    -0.320    22.054
+ATOM      8  C   UNK            25.654  -3.681   5.892 -0.26 +0.09    +0.258    22.054
+ATOM      9  O   UNK            26.051  -2.944   4.999 -0.84 -0.15    -0.265    22.054
+ATOM     10  C   UNK            25.685  -3.355   7.367 -0.32 +0.03    +0.111    22.054
+ATOM     11  C   UNK            25.639  -1.851   7.623 -0.48 +0.00    +0.005    22.054
+ATOM     12  C   UNK            24.290  -1.262   7.246 -0.66 +0.00    +0.005    22.054
+TER
+ENDMDL
+
+
+AVSFLD: # AVS field file
+AVSFLD: #
+AVSFLD: # Created by AutoDock
+AVSFLD: #
+AVSFLD: ndim=2           # number of dimensions in the field
+AVSFLD: nspace=1         # number of physical coordinates
+AVSFLD: veclen=7         # vector size
+AVSFLD: dim1=12          # atoms
+AVSFLD: dim2=5           # conformations
+AVSFLD: data=Real       # data type (byte,integer,Real,double)
+AVSFLD: field=uniform    # field coordinate layout
+AVSFLD: label= x y z vdW Elec q RMS
+AVSFLD: variable 1 file = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dlg.pdb filetype = ascii offset = 5 stride = 12
+AVSFLD: variable 2 file = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dlg.pdb filetype = ascii offset = 6 stride = 12
+AVSFLD: variable 3 file = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dlg.pdb filetype = ascii offset = 7 stride = 12
+AVSFLD: variable 4 file = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dlg.pdb filetype = ascii offset = 8 stride = 12
+AVSFLD: variable 5 file = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dlg.pdb filetype = ascii offset = 9 stride = 12
+AVSFLD: variable 6 file = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dlg.pdb filetype = ascii offset = 10 stride = 12
+AVSFLD: variable 7 file = F:/Autodock/Autodock/Albumin/ButyrylCholine/BC10/AlbBC.dlg.pdb filetype = ascii offset = 11 stride = 12
+AVSFLD: # end of file
+
+>>> Closing the docking parameter file (DPF)...
+This docking finished at:			4:22 27" p.m., 01/16/2017
+
+
+________________________________________________________________________________
+
+F:/Autodock/Autodock/autodock4.exe: Successful Completion on "LAPTOP-6LBS08QH"
+
+Real= 12m 46.80s,  CPU= 5m 36.11s,  System= 0.14s
+________________________________________________________________________________
+
